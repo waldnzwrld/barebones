@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "==> Updating Homebrew..."
+brew update
+
+brew bundle check >/dev/null 2>&1 || {
+  echo "==> Installing Homebrew dependencies..."
+  brew bundle
+}
+
+echo "==> Starting PostgreSQL service..."
+brew services restart postgres
+
+echo "==> Installing Node dependencies..."
+npm install
