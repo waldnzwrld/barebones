@@ -22,4 +22,7 @@ createdb barebones || true
 echo "Running migrations"
 npm run migrate
 
-echo "Ready to rock, run [npm run dev] to get coding"
+echo "Seeding DB"
+node script/seeddb.js
+
+echo "Ready to rock, run ['npm run dev'] to get coding"

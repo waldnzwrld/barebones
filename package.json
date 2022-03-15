@@ -10,7 +10,6 @@
     "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject",
     "migrate": "knex migrate:latest --knexfile=knexfile.js",
     "test": "jest --detectOpenHandles --forceExit"
   },
