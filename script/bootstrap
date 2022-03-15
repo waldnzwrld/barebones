@@ -15,3 +15,11 @@ brew services restart postgres
 
 echo "==> Installing Node dependencies..."
 npm install
+
+echo "Creating database"
+createdb barebones || true
+
+echo "Running migrations"
+npm run migrate
+
+echo "Ready to rock, run [npm run dev] to get coding"
