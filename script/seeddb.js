@@ -2,7 +2,7 @@
 
 const Pojso = require('../server/models/pojso');
 
-Pojso.forge({id: 1}).fetch().then(function(pojso) {
+Pojso.where({id: 1}).fetch().then(function(pojso) {
         if (!pojso) {
             new Pojso({name: "BareBones"}).save().then(function(model) {
                 console.log(`seeded db with ${model.toJSON()}`)
