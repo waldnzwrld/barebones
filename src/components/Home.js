@@ -1,6 +1,22 @@
 import React from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+
+const AppContainer = styled.div`
+  text-align: center;
+`;
+
+const Header = styled.header`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
 
 export default function Home(){
   const [appName, setAppName] = useState('');
@@ -17,12 +33,12 @@ export default function Home(){
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <AppContainer>
+      <Header>
         <p>
           {appName}
         </p>
-      </header>
-    </div>
+      </Header>
+    </AppContainer>
   );
 }
