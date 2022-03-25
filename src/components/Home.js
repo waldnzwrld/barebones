@@ -1,8 +1,9 @@
+import React from 'react';
 import '../App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-export default () => {
+export default function Home(){
   const [appName, setAppName] = useState('');
 
   useEffect(() => {

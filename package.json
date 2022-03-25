@@ -11,6 +11,10 @@
     "react-build": "react-scripts build",
     "react-test": "react-scripts test",
     "migrate": "knex migrate:latest --knexfile=knexfile.js",
+    "migrate-down": "knex migrate:down --knexfile=knexfile.js",
+    "migrate-up": "knex migrate:up --knexfile=knexfile.js",
+    "migrate-rollback": "knex migrate:rollback --knexfile=knexfile.js",
+    "create-migration": "knex migrate:make --knexfile=knexfile.js",
     "test": "jest --detectOpenHandles --forceExit"
   },
   "dependencies": {
@@ -34,6 +38,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.29.4",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
